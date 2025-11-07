@@ -1,0 +1,215 @@
+:root {
+  --bs-primary-rgb: 173, 21, 21; /* Un rosso "Roma" scuro, elegante */
+  --bs-secondary-rgb: 244, 241, 235; /* Un crema/beige chiaro */
+}
+
+/* Abilita lo "smooth scroll" (scorrimento fluido) */
+html {
+  scroll-behavior: smooth;
+  /* Offset per la navbar fissa (evita che i titoli finiscano sotto la navbar) */
+  scroll-padding-top: 70px;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h2::before {
+  content: "#";
+}
+
+/* --- Stili Navbar --- */
+.navbar {
+  transition: background-color 0.3s ease;
+}
+
+/* Stile al brand "Roma" */
+.navbar-brand {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 1.75rem;
+}
+
+/* Stile per i link attivi (ScrollSpy) ed hover */
+.navbar-dark .navbar-nav .nav-link {
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #ffffff; /* Bianco per migliore visibilità */
+}
+
+/* Linea di sottolineatura per link attivi/hover */
+.navbar-dark .navbar-nav .nav-link.active::after,
+.navbar-dark .navbar-nav .nav-link:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 8px; /* Allineato al padding del link */
+  right: 8px; /* Allineato al padding del link */
+  height: 2px;
+  background-color: var(--bs-primary); /* Colore rosso primario */
+  transition: all 0.3s ease;
+}
+.navbar-dark .navbar-nav .nav-link:not(.active):not(:hover)::after {
+  width: 0; /* Nasconde la linea se non attivo o hover */
+}
+
+/* 1. Hero Section con Parallax */
+.hero-section {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-section .parallax-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  filter: brightness(0.6);
+}
+
+/* --- Stili Sezioni --- */
+
+/* Titoli di sezione con linea */
+h2.section-title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  margin-bottom: 3rem;
+}
+h2.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--bs-primary);
+}
+
+/* 2. Sezione "Cosa Vedrai" */
+.highlight-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 3. Sezione Timeline */
+.timeline {
+  list-style: none;
+  padding: 0;
+  position: relative;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 30px;
+  width: 2px;
+  background-color: #e9ecef;
+}
+.timeline-item {
+  margin-bottom: 40px;
+  position: relative;
+}
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 21px;
+  top: 5px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: white;
+  border: 4px solid var(--bs-primary);
+  z-index: 1;
+}
+.timeline-content {
+  margin-left: 60px;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+}
+.timeline-content h5 {
+  color: var(--bs-primary);
+}
+
+/* 4. Galleria Cibo */
+.gallery-item {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.gallery-item img {
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+.gallery-item:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.8);
+}
+
+/* 5. Sezione Dedica */
+.dedica-section {
+  color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.dedica-section::before {
+  content: "";
+  background-image: url("assets/colonna.jpg");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  filter: blur(4px) brightness(0.7);
+  transform: scale(1.05);
+}
+
+.blockquote {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+/* Footer */
+footer {
+  background-color: #343a40; /* Dark */
+  color: #f8f9fa; /* Light */
+  filter: brightness(1.4);
+}
