@@ -52,5 +52,4 @@ window.onscroll = function () {
   } else {
     backToTopButton.classList.remove("visible");
   }
-  console.log("backToTopButton", backToTopButton.classList);
 };
