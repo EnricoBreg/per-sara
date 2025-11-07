@@ -148,7 +148,7 @@ h2.section-title::after {
   content: "";
   position: absolute;
   left: 22px;
-  top: 5px;
+  top: 23px;
   width: 18px;
   height: 18px;
   border-radius: 50%;
@@ -163,6 +163,11 @@ h2.section-title::after {
   border-radius: 8px;
 }
 .timeline-content h5 {
+  color: rgb(var(--bs-primary-rgb));
+}
+
+#linkToHotel {
+  font-size: 1.5;
   color: rgb(var(--bs-primary-rgb));
 }
 
