@@ -27,16 +27,17 @@ new simpleParallax(bg_image, {
 // *** NUOVO SCRIPT ***
 // Logica per cambiare lo sfondo della Navbar da trasparente a scuro dopo lo scroll
 const mainNavbar = document.getElementById("mainNavbar");
+const backToTopButton = document.getElementById("backToTopBtn");
 
 // All'inizio, la navbar sulla Hero è più bella trasparente
 mainNavbar.classList.remove("bg-dark");
 mainNavbar.style.backgroundColor = "rgba(0, 0, 0, 0.3)"; // Sfondo semi-trasparente iniziale
 
 window.onscroll = function () {
-  if (
-    document.body.scrollTop > 100 ||
-    document.documentElement.scrollTop > 100
-  ) {
+  let scrollPosition =
+    document.documentElement.scrollTop || document.body.scrollTop;
+
+  if (scrollPosition > 100) {
     // Quando si scorre, diventa scura
     mainNavbar.classList.add("bg-dark");
     mainNavbar.style.backgroundColor = ""; // Rimuove lo stile inline
@@ -45,4 +46,11 @@ window.onscroll = function () {
     mainNavbar.classList.remove("bg-dark");
     mainNavbar.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
   }
+
+  if (scrollPosition > 300) {
+    backToTopButton.classList.add("visible");
+  } else {
+    backToTopButton.classList.remove("visible");
+  }
+  console.log("backToTopButton", backToTopButton.classList);
 };

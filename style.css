@@ -1,6 +1,7 @@
 :root {
   --bs-primary-rgb: 47, 69, 56; /* Verde alloro scuro (es. #2F4538) */
   --bs-secondary-rgb: 227, 218, 201; /* Beige travertino (es. #E3DAC9) */
+  --bs-btn-primary: 47, 69, 56;
 }
 
 /* Abilita lo "smooth scroll" (scorrimento fluido) */
@@ -211,4 +212,34 @@ h2.section-title::after {
 footer {
   color: #f8f9fa; /* Light */
   filter: brightness(1.4);
+}
+
+/* --- Pulsante "Torna Su" (Back to Top) --- */
+#backToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999; /* Assicura che sia sopra quasi tutto */
+
+  /* Stile per un bottone rotondo */
+  width: 65px;
+  height: 65px;
+  border: 0;
+  border-radius: 50%;
+  display: flex; /* Per centrare l'icona */
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem; /* Icona leggermente più grande */
+  background-color: rgb(var(--bs-primary-rgb));
+
+  /* Stato Iniziale: Nascosto */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Stato Visibile: (verrà aggiunto/tolto via JS) */
+#backToTopBtn.visible {
+  opacity: 1;
+  visibility: visible;
 }
