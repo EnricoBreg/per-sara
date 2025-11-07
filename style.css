@@ -1,6 +1,6 @@
 :root {
-  --bs-primary-rgb: 173, 21, 21; /* Un rosso "Roma" scuro, elegante */
-  --bs-secondary-rgb: 244, 241, 235; /* Un crema/beige chiaro */
+  --bs-primary-rgb: 47, 69, 56; /* Verde alloro scuro (es. #2F4538) */
+  --bs-secondary-rgb: 227, 218, 201; /* Beige travertino (es. #E3DAC9) */
 }
 
 /* Abilita lo "smooth scroll" (scorrimento fluido) */
@@ -65,7 +65,7 @@ h2::before {
   left: 8px; /* Allineato al padding del link */
   right: 8px; /* Allineato al padding del link */
   height: 2px;
-  background-color: var(--bs-primary); /* Colore rosso primario */
+  background-color: rgb(var(--bs-secondary-rgb)); /* Colore secondario */
   transition: all 0.3s ease;
 }
 .navbar-dark .navbar-nav .nav-link:not(.active):not(:hover)::after {
@@ -112,7 +112,7 @@ h2.section-title::after {
   transform: translateX(-50%);
   width: 60px;
   height: 3px;
-  background-color: var(--bs-primary);
+  background-color: rgb(var(--bs-secondary-rgb));
 }
 
 /* 2. Sezione "Cosa Vedrai" */
@@ -146,13 +146,13 @@ h2.section-title::after {
 .timeline-item::before {
   content: "";
   position: absolute;
-  left: 21px;
+  left: 22px;
   top: 5px;
   width: 18px;
   height: 18px;
   border-radius: 50%;
   background-color: white;
-  border: 4px solid var(--bs-primary);
+  border: 4px solid rgb(var(--bs-primary-rgb));
   z-index: 1;
 }
 .timeline-content {
@@ -162,7 +162,7 @@ h2.section-title::after {
   border-radius: 8px;
 }
 .timeline-content h5 {
-  color: var(--bs-primary);
+  color: rgb(var(--bs-primary-rgb));
 }
 
 /* 4. Galleria Cibo */
@@ -209,7 +209,6 @@ h2.section-title::after {
 
 /* Footer */
 footer {
-  background-color: #343a40; /* Dark */
   color: #f8f9fa; /* Light */
   filter: brightness(1.4);
 }
