@@ -248,3 +248,8 @@ footer {
   opacity: 1;
   visibility: visible;
 }
+
+/* Utilities */
+.text-serif {
+  font-family: "Playfair Display", serif;
+}
