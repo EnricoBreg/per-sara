@@ -16,6 +16,10 @@ body {
   font-weight: 300;
 }
 
+mt-2 {
+  margin-top: 0.5rem;
+}
+
 h1,
 h2,
 h3,

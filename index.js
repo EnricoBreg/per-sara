@@ -13,7 +13,6 @@ new simpleParallax(image, {
   overflow: true,
 });
 
-// *** 4. AGGIUNGI QUESTO NUOVO BLOCCO SCRIPT ***
 // Inizializza SimpleParallax (Sfondo Sfuocato)
 var bg_image = document.getElementsByClassName("parallax-bg-blurred");
 new simpleParallax(bg_image, {
@@ -22,9 +21,7 @@ new simpleParallax(bg_image, {
   overflow: true,
   delay: 0.2, // Leggero ritardo
 });
-// *** FINE AGGIUNTA 4 ***
 
-// *** NUOVO SCRIPT ***
 // Logica per cambiare lo sfondo della Navbar da trasparente a scuro dopo lo scroll
 const mainNavbar = document.getElementById("mainNavbar");
 const backToTopButton = document.getElementById("backToTopBtn");
